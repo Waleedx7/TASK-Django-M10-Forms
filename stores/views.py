@@ -4,7 +4,7 @@ from django.shortcuts import render
 from stores import models
 
 
-def get_store_items(request: HttpRequest) -> HttpResponse:
+def get_store_items(request):
     store_items: list[models.StoreItem] = list(models.StoreItem.objects.all())
     context = {
         "store_items": store_items,

@@ -3,7 +3,7 @@ Let's make some cookies!
 ## Setup
 
 1. Fork and clone [this repository](https://github.com/JoinCODED/TASK-Django-M10-Forms).
-2. Install the `requirements` using `pip install -r requirements/dev.lock`.
+2. Install the `requirements` using `pip install -r requirements.txt`.
 3. Run the `migrations`.
 
 ## Task
@@ -37,7 +37,7 @@ Let's make some cookies!
    5. Render your `request`, `update_store_item.html` template, and `context`.
    6. Check if the `request.method` is equal to `POST` (right after you create the `StoreItemForm` instance), if so, create a new instance of `StoreItemForm`.
       - Pass to it: `request.post` as the first argument and `instance=store_item` as the second argument.
-   7. Check if the `form` is valid. If so, save and redirect to the `flight-list` page.
+   7. Check if the `form` is valid. If so, save and redirect to the `store-item-list` page.
 2. Add our `update_store_item` to our `urls.py` with the name `update-store-item` (make sure to add `item_id` in the path).
 3. Add `update_store_item.html` in the `templates` folder.
    - Render the form in the body.
