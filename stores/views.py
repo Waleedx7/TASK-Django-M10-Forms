@@ -11,7 +11,7 @@ def get_store_items(request):
         "store_items": store_items,
     }
     return render(request, "store_item_list.html", context)
-
+    
 def create_store_item(request):
     form = StoreItemForm()
     if request.method == "POST":
