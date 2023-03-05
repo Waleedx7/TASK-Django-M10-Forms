@@ -16,9 +16,8 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand">WAM Store</a>
-        <button class="d-flex btn btn-outline-light" type="submit">
-          Add Item
-        </button>
+        <button class="d-flex btn btn-outline-black" type="submit">
+          <a href="{% url 'create-store-list' %}" class="d-flex btn btn-outline-light">Add Item</a>
       </div>
     </nav>
     <div class="container  overflow-hidden">
@@ -36,6 +35,8 @@
               <h5 class="card-title">{{ item.name }}</h3>
                 <h6 class="card-subtitle mb-2 text-muted">Kind: {{ item.kind }}</h6>
                 <p class="card-text">{{ item.description }}</p> 
+                <p>Modified At: {{ item.modified_at }}</p>
+                <a href="{% url 'delete-store-item' item_id=item.id %}">Delete Item</a>
               </div>
             </div>
         </div>
